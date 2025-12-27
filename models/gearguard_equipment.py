@@ -3,7 +3,7 @@ from odoo import models, fields, api
 class Equipment(models.Model):
     _name = 'gearguard.equipment'
     _description = 'Equipment'
-    _inherit = ['mail.thread']
+    _inherit = ['mail.thread', 'mail.activity.mixin']
 
     name = fields.Char(string='Equipment Name', required=True, tracking=True)
     serial_number = fields.Char(string='Serial Number', tracking=True)
